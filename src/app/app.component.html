@@ -1,7 +1,14 @@
 <main>
   <app-learning-resources />
-
   <hr />
-
   <app-auth />
+  <p *appAuth="'admin'" class="protected-content admin">
+    This paragraph is visible only to admin users.
+  </p>
+  <p *appAuth="'user'" class="protected-content unauthenticated">
+    This paragraph is visible only to regular users.
+  </p>
+  <p *appAuth="'guest'" class="protected-content authenticated">
+    This paragraph is visible only to guest users.
+  </p>
 </main>
